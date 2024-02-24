@@ -7,11 +7,11 @@ PATHS = -IC:\mingw64\include -LC:\mingw64\lib
 LINKER = -lraylib -lopengl32 -lgdi32 -lwinmm
 
 dev: 
-	${CC} ${CFLAGS} ${PATHS} ${CONSOLE} main.c ${LINKER} 
+	${CC} ${CFLAGS} ${PATHS} main.c ${LINKER} 
 	./${TITLE}
 
 prod: 
-	${CC} ${CFLAGS} ${PATHS} main.c ${LINKER} 
+	${CC} ${CFLAGS} ${PATHS} ${CONSOLE} main.c ${LINKER} 
 
 clean:
 	rm -f ${TITLE}.exe
